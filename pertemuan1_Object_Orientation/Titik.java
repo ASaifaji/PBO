@@ -82,4 +82,26 @@ public class Titik {
         return Math.sqrt((this.absis * this.absis)+(this.ordinat * this.ordinat));
     }
 
+    double getJarak(Titik T){
+        return Math.sqrt(((this.absis - T.absis)*(this.absis - T.absis)) + ((this.ordinat - T.ordinat)*(this.ordinat - T.ordinat)));
+    }
+
+    void refleksiX(){
+        ordinat = -(ordinat);
+    }
+
+    void refleksiY(){
+        absis = -(absis);
+    }
+
+    Titik getRefleksiX(){
+        Titik T = new Titik(this.absis, -(this.ordinat));
+        return T;
+    }
+
+    Titik getRefleksiY(){
+        Titik T = new Titik(-(this.absis), this.ordinat);
+        return T;
+    }
+
 }   // end class Titik

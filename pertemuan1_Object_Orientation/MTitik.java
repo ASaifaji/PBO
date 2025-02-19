@@ -15,12 +15,12 @@ public class MTitik {
 
         Titik T2 = T1;
         T2.printTitik();
-        T1.setAbsis(10);
-        T1.setOrdinat(10);
+        T1.setAbsis(6);
+        T1.setOrdinat(8);
         T2.printTitik();
 
         Titik T3 = new Titik();     // membuat objek titik (0,0)
-        Titik T4 = new Titik(-3,5);  // membuat objek titik (3,5)
+        Titik T4 = new Titik(3,4);  // membuat objek titik (3,5)
 
         System.out.println("Jumlah Objek Titik = " + Titik.getCounterTitik());
         System.out.println("Jumlah Objek Titik = " + T4.getCounterTitik());
@@ -28,5 +28,19 @@ public class MTitik {
         T2.printCounterTitik();
 
         System.out.println("Kuadran ke " + T4.getKuadran());
+
+        System.out.println("Jarak ke pusat = " + T4.getJarakPusat());
+
+        System.out.println("Jarak ke pusat = " + T4.getJarak(T1));
+
+        T1.printTitik();
+        T1.refleksiX();
+        Titik T5 = T1.getRefleksiX();
+        T5.printTitik();
+        T1.printTitik();
+        T1.refleksiY();
+        Titik T6 = T1.getRefleksiY();
+        T6.printTitik();
+        T1.printTitik();
     }   
 }
